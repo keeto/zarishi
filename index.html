@@ -1,0 +1,83 @@
+<html>
+<head>
+	<script src="js/mootools.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zarishi.js" type="text/javascript" charset="utf-8"></script>
+	<script src="prefs.js" type="text/javascript" charset="utf-8"></script>
+	<script src="plugins/awesome.js" type="text/javascript" charset="utf-8"></script>
+	<script src="plugins/google.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		window.addEvent('domready', function(){
+			try {
+				Zarishi.initialize();
+				Zarishi.connect();
+			} catch(e) {
+				alert(e)
+			}
+		})
+	</script>
+	
+	<style type="text/css" media="screen">
+		body {
+			background: #333;
+			color: #fff;
+			font-family: "Lucida Grande", "Tahoma", "Arial", sans-serif;
+			margin: 0;
+			padding: 0;
+			-webkit-user-select: none;
+		}
+		
+		#header {
+			background: #000;
+			color: #999;
+			height: 52px;
+			left: 0;
+			padding: 5px 10px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		
+		#header h1 {
+			margin: 0;
+		}
+		
+		#status {
+			color: #fff;
+			float: right;
+			font-size: 10px;
+			padding-top: 15px;
+		}
+		
+		#main {}
+		
+		#main .test {
+			background: #ccc;
+			display: inline-block;
+			margin: 10px;
+			height: 300px;
+			width: 200px;
+		}
+		
+		#log {
+			bottom: 10px;
+			font-size: 10px;
+			left: 0;
+			overflow: auto;
+			padding: 10px;
+			position: absolute;
+			right: 0;
+			top: 65px;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<img src="images/Zarishi.png" width="120" height="42" alt="Zarishi" id="test" />
+		<div id="status">
+			System Status: <strong>Online</strong>
+		</div>
+	</div>
+	<div id="log">
+	</div>
+</body>
+</html>
